@@ -7,6 +7,7 @@ public class BaseClass {
     @BeforeMethod
     public void beforeMethod() {
         System.out.println("BaseClass's Before Test method");
+
     }
 
     @AfterMethod
