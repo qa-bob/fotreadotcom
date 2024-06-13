@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SciconSolutionsHomePage {
+public class HomePage {
     @Test
     public void testFortrea() {
 
@@ -20,15 +20,14 @@ public class SciconSolutionsHomePage {
     }
 
     private static WebDriver getWebDriver() {
-        WebDriver driver = new ChromeDriver();
-        return driver;
+        return new ChromeDriver();
     }
 
     @Test
     public void testFortreaPageText(){
         WebDriver driver = getWebDriver();  //TODO: Need to not build a new driver for each Test
-        driver.get("https://www.fortrea.com/");
-        driver.manage().window().maximize();
+            driver.get("https://www.fortrea.com/");
+            driver.manage().window().maximize();
         WebElement pageText = driver.findElement(By.cssSelector("div > h1"));
         String pageTextExpected = "Solutions that bring life-changing treatments to patients faster";
         String pageTextAcual = pageText.getText();
