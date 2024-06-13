@@ -26,14 +26,13 @@ public class SciconSolutionsHomePage {
 
     @Test
     public void testFortreaPageText(){
-        WebDriver driver = getWebDriver();
+        WebDriver driver = getWebDriver();  //TODO: Need to not build a new driver for each Test
         driver.get("https://www.fortrea.com/");
         driver.manage().window().maximize();
         WebElement pageText = driver.findElement(By.cssSelector("div > h1"));
         String pageTextExpected = "Solutions that bring life-changing treatments to patients faster";
         String pageTextAcual = pageText.getText();
         Assert.assertEquals(pageTextAcual, pageTextExpected, "Page Text is not the same as expected");
-        //Assert.assertEquals(pageTextAcual.contains(pageTextExpected), "Page Text is not the same as expected");
         driver.quit();
     }
 }
