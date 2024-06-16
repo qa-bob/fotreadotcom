@@ -27,6 +27,7 @@ public class BaseClass {
     @AfterMethod
     public void afterMethod() {
         System.out.println("BaseClass's After Test method");
+        driver.quit();
     }
 
     @BeforeClass
@@ -37,5 +38,6 @@ public class BaseClass {
     @AfterClass
     public void afterClass() {
         System.out.println("BaseClass's After Class method");
+        driver.quit();
     }
 }
