@@ -1,8 +1,19 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.util.List;
 
 public class Accessibility extends BaseClass{
     @Test
-    public void testCaseHotKeys() {
+    public void testCaseHotKeys() throws InterruptedException {
         System.out.println("Test HotKeys");
     }
 
